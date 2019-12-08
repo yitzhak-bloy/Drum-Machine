@@ -11,6 +11,17 @@ import React, { Component } from "react";
     sound.play();
   };
 
+  componentDidMount() {
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 81) {
+        document.getElementById('Q').play();
+      }
+    });
+  }
+    
+  
+
+
     render() {
       return (
         <div id="drum-machine">
