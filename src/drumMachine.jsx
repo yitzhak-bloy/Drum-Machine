@@ -1,80 +1,91 @@
 import React, { Component } from "react";
 
-   class DrumMachine extends Component {
-    constructor(props) {
-      super(props);
-      this.playMusic = this.playMusic.bind(this);
+const list = [
+    {
+      id: 'Heater-1',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
+      key: 'Q'
+    },
+    {
+      id: 'Heater-2',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3',
+      key: 'W'
+    },
+    {
+      id: 'Heater-3',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
+      key: 'E'
+    },
+    {
+      id: 'Heater-4_1',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
+      key: 'A'
+    },
+    {
+      id: 'Heater-6',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3',
+      key: 'S'
+    },
+    {
+      id: 'Dsc_Oh',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
+      key: 'D'
+    },
+    {
+      id: 'RP4_KICK_1',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3',
+      key: 'Z'
+    },
+    {
+      id: 'Cev_H2',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3',
+      key: 'X'
+    },
+    {
+      id: 'Chord_2',
+      src: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3',
+      key: 'C'
     }
+]
 
-  playMusic = () => {
-    const sound = document.getElementById('Q');
+class DrumMachine extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.playMusic = this.playMusic.bind(this);
+  // }
+
+  playMusic = (key) => {
+    const sound = document.getElementById(key);
     sound.play();
   };
 
   componentDidMount() {
     document.addEventListener('keydown', function(e) {
-      if (e.keyCode === 81) {
-        document.getElementById('Q').play();
+      // if (e.keyCode === 81) {
+      //   document.getElementById('Q').play();
+      // }
+      switch (e.keyCode) {
+        case 81:
+          document.getElementById('Q').play();
       }
     });
   }
+
     
-  
-
-
-    render() {
-      return (
-        <div id="drum-machine">
-          <div id="display" />
-
-          <button className='drum-pad' id='Heater-1' onClick={() => this.playMusic()}>
-            <audio   className='clip' id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"/ >
-            Q
-          </button>
-          <button className='drum-pad' id='W'>
-            <hudio src="" className='clip' id="W">
-            </hudio>
-            W
-          </button>
-          <button className='drum-pad' id='E'>
-            <hudio src="" className='clip' id="E">
-            </hudio>
-            E
-          </button>
-          <button className='drum-pad' id='A'>
-            <hudio src="" className='clip' id="A">
-            </hudio>
-            A
-          </button>
-          <button className='drum-pad' id='S'>
-            <hudio src="" className='clip' id="S">
-            </hudio>
-            S
-          </button>
-          <button className='drum-pad' id='D'>
-            <hudio src="" className='clip' id="D">
-            </hudio>
-            D
-          </button>
-          <button className='drum-pad' id='Z'>
-            <hudio src="" className='clip' id="Z">
-            </hudio>
-            Z
-          </button>
-          <button className='drum-pad' id='X'>
-            <hudio src="" className='clip' id="X">
-            </hudio>
-            X
-          </button>
-          <button className='drum-pad' id='C'>
-            <hudio src="" className='clip' id="C">
-            </hudio>
-            C
-          </button>
-        </div>
-      );
-    }
-
+  render() {
+    return (
+      <div id="drum-machine">
+        <div id="display" />
+        {list.map((item) => {
+          return (
+          <button className='drum-pad' id={item.id} onClick={() => this.playMusic(item.key)}>
+            <audio className='clip' id={item.key} src={item.src}/ >
+            {item.key}
+          </button>)
+        })}
+      </div>
+    );
   }
+}
   
   export default DrumMachine;
