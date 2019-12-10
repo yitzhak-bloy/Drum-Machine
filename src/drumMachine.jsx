@@ -2,10 +2,20 @@ import React, { Component } from "react";
 import ListOfSounds from './ListOfSounds'
 
 class DrumMachine extends Component {
+    constructor(props) {
+    super(props);
+    this.state = {
+      nameOfSound: ''
+    }
+  }
 
-  playMusic = (key) => {
+
+  playMusic = (key, id) => {
     const sound = document.getElementById(key);
     sound.play();
+    this.setState({
+      nameOfSound: id
+    })
   };
 
   componentDidMount() {
@@ -46,10 +56,12 @@ class DrumMachine extends Component {
   render() {
     return (
       <div id="drum-machine">
-        <div id="display" />
+        <div id="display" >
+          {this.state.nameOfSound}
+        </div>
         {ListOfSounds.map((item) => {
           return (
-            <button className='drum-pad' id={item.id} onClick={() => this.playMusic(item.key)}>
+            <button className='drum-pad' id={item.id} onClick={() => this.playMusic(item.key, item.id)}>
               <audio className='clip' id={item.key} src={item.src}/ >
               {item.key}
             </button>
