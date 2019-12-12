@@ -1,3 +1,16 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100vw;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  background-image: url(./image/josh-sorenson-MjIMc6uhwrE-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#root {
+  height: 100%;
 }

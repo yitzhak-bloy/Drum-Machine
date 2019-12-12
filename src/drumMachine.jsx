@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './drumMachine.scss';
 import ListOfSounds from './ListOfSounds'
 
 function DrumMachine() {
@@ -62,7 +63,7 @@ function DrumMachine() {
               setNameOfSound(item.id)
             }}
           >
-            <audio className='clip' id={item.key} src={item.src}/ >
+            <audio className='clip' id={item.key} src={item.src} / >
             {item.key}
           </button>
         )

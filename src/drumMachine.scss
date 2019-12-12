@@ -1,0 +1,21 @@
+#drum-machine {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows:  repeat(4, 75px);
+    grid-gap: 15px 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: space-around;
+}
+
+#display {
+    grid-column: 1 / 4;
+    background-color: blue;
+}
+
+#display {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
