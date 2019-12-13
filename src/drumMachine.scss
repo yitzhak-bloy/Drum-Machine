@@ -1,45 +1,42 @@
+$main-color: #30414D;
+$text-color: black;
+
 #drum-machine {
-
-
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  repeat(4, 75px);
-    grid-gap: 15px 15px;
-    margin-left: 20%;
-    margin-right: 20%;
-    justify-content: space-around;
-    color: rgb(0, 0, 0);
-    font-size: 3.5ch;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 75px);
+  grid-gap: 15px 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: $text-color;
+  font-size: 3.5ch;
 }
-
+  
 #display {
-    grid-column: 1 / 4;
-        background-color: #30414D;
-        opacity: 0.9;
+  grid-column: 1 / 4;
+  background-color: $main-color;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#display {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
+  
 .drum-pad {
-    background-color: #30414D;
-    opacity: 0.6;
+  background-color: $main-color;
+  opacity: 0.6;
+  border-radius: 15px;
 
-
-    border-radius: 15px;
-
+  &:hover {
+    opacity: 0.9;
+  }
 }
-
-.drum-pad:hover {
-    background-color: #30414D;
-    opacity: 0.9; 
-}
-
+  
 button {
-    color: rgb(0, 0, 0);
-    font-size: 4ch;
-
+  color: $text-color;
+  font-size: 4ch;
 }
+
+// h1 {
+//   margin-bottom: 15px;
+//   font-size: 7vh;
+// }

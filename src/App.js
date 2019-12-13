@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+    <h1>drum machine</h1>
       <DrumMachine />
     </div>
   );

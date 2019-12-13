@@ -4,7 +4,7 @@ import ListOfSounds from './ListOfSounds'
 
 function DrumMachine() {
 
-  const [nameOfSound, setNameOfSound] = useState('');
+  const [nameOfSound, setNameOfSound] = useState('Click a button or Press a key');
 
   useEffect(() =>  {
     document.addEventListener('keydown', (e) => {
@@ -51,23 +51,25 @@ function DrumMachine() {
   })
 
   return (
-    <div id="drum-machine">
-      <div id="display" >
-        {nameOfSound}
+    <div>
+      <div id="drum-machine">
+        <div id="display" >
+          {nameOfSound}
+        </div>
+        {ListOfSounds.map((item) => {
+          return (
+            <button className='drum-pad' id={item.id} key={item.key} onClick={() => {
+                const sound = document.getElementById(item.key);
+                sound.play();
+                setNameOfSound(item.id)
+              }}
+            >
+              <audio className='clip' id={item.key} src={item.src} / >
+              {item.key}
+            </button>
+          )
+        })}
       </div>
-      {ListOfSounds.map((item) => {
-        return (
-          <button className='drum-pad' id={item.id} key={item.key} onClick={() => {
-              const sound = document.getElementById(item.key);
-              sound.play();
-              setNameOfSound(item.id)
-            }}
-          >
-            <audio className='clip' id={item.key} src={item.src} / >
-            {item.key}
-          </button>
-        )
-      })}
     </div>
   );
 }
