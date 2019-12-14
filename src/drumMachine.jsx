@@ -53,6 +53,7 @@ function DrumMachine() {
   return (
     <div>
       <div id="drum-machine">
+      <h1>drum machine</h1>
         <div id="display" >
           {nameOfSound}
         </div>
