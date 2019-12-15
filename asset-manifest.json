@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Drum-Machine/static/css/main.9f74fa27.chunk.css",
+    "main.js": "/Drum-Machine/static/js/main.eabe5424.chunk.js",
+    "main.js.map": "/Drum-Machine/static/js/main.eabe5424.chunk.js.map",
+    "runtime-main.js": "/Drum-Machine/static/js/runtime-main.0e718b7d.js",
+    "runtime-main.js.map": "/Drum-Machine/static/js/runtime-main.0e718b7d.js.map",
+    "static/js/2.052a3b59.chunk.js": "/Drum-Machine/static/js/2.052a3b59.chunk.js",
+    "static/js/2.052a3b59.chunk.js.map": "/Drum-Machine/static/js/2.052a3b59.chunk.js.map",
+    "index.html": "/Drum-Machine/index.html",
+    "precache-manifest.853659be3f4c8ae676e86408ada97887.js": "/Drum-Machine/precache-manifest.853659be3f4c8ae676e86408ada97887.js",
+    "service-worker.js": "/Drum-Machine/service-worker.js",
+    "static/css/main.9f74fa27.chunk.css.map": "/Drum-Machine/static/css/main.9f74fa27.chunk.css.map",
+    "static/media/App.css": "/Drum-Machine/static/media/josh-sorenson-MjIMc6uhwrE-unsplash.c3ada4dd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e718b7d.js",
+    "static/js/2.052a3b59.chunk.js",
+    "static/css/main.9f74fa27.chunk.css",
+    "static/js/main.eabe5424.chunk.js"
+  ]
+}
